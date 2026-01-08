@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Monster</title>
+
+    <style>
+        body { background: #222; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px; }
+        .controls { border: 2px solid #555; display: inline-block; padding: 20px; border-radius: 10px; }
+        kbd { background: #eee; color: #333; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    
+<div class="controls">
+    <p> Press <kbd> A </kbd>to attack (Bersseker stance)</p>
+    <p> Press <kbd> H </kbd>to heal (Holy stance)</p>
+    <p> Press <kbd> L </kbd>to level up (closure)</p>
+</div>
+<hr>
+<div id="status-display">
+    <h2 id="monster-hp">Total Enemy HP: 200</h2>
+    <p id="game-message">Battle start!</p>
+</div>
+
+<script src="./script.js"></script>
+    
+</body>
+</html>
