@@ -42,10 +42,10 @@ let monsters = [
 // --- 4. THE UI UPDATER (Error-Proofed) ---
 const updateUI = (currentHP, message) => {
     // Optional Chaining ?. prevents "null" errors if an ID is missing
-    document.getElementById("monster-hp")?.innerText = `HP: ${currentHP} / ${MAX_HP}`;
-    document.getElementById("game-message")?.innerText = message;
-    document.getElementById("hero-lv")?.innerText = `Level: ${hero.getLv()}`;
-    document.getElementById("monster-count")?.innerText = `Enemies: ${monsters.length}`;
+    document.getElementById("monster-hp").innerText = `HP: ${currentHP} / ${MAX_HP}`;
+    document.getElementById("game-message").innerText = message;
+    document.getElementById("hero-lv").innerText = `Level: ${hero.getLv()}`;
+    document.getElementById("monster-count").innerText = `Enemies: ${monsters.length}`;
    
     const elBar = document.getElementById("hp-bar");
     if (elBar) {
