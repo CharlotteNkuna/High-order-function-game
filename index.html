@@ -1,30 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Monster</title>
 
     <style>
-        body { background: #222; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px; }
-        .controls { border: 2px solid #555; display: inline-block; padding: 20px; border-radius: 10px; }
-        kbd { background: #eee; color: #333; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        body {
+            background: #1a1a1a;
+            color: #eee;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .game-box {
+            background: #2a2a2a;
+            border: 2px solid #444;
+            border-radius: 15px;
+            padding: 30px;
+            display: inline-block;
+            width: 400px;
+        }
+
+        .bar-bg {
+            width: 100%;
+            background: #444;
+            height: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+
+        #hp-bar {
+            width: 100%;
+            height: 100%;
+            background: #00ff00;
+            transition: width 0.4s ease;
+        }
+
+        kbd {
+            background: #ffcc00;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        #game-message {
+            color: #00ffcc;
+            font-style: italic;
+            min-height: 50px;
+            margin-top: 10px;
+        }
+
+        #boss-warning {
+            color: #ff4444;
+            font-weight: bold;
+            height: 20px;
+            margin-bottom: 5px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
     </style>
 </head>
-<body>
-    
-<div class="controls">
-    <p> Press <kbd> A </kbd>to attack (Bersseker stance)</p>
-    <p> Press <kbd> H </kbd>to heal (Holy stance)</p>
-    <p> Press <kbd> L </kbd>to level up (closure)</p>
-</div>
-<hr>
-<div id="status-display">
-    <h2 id="monster-hp">Total Enemy HP: 200</h2>
-    <p id="game-message">Battle start!</p>
-</div>
 
-<script src="./script.js"></script>
-    
+<body>
+    <div class="game-box">
+        <h1>⚔️ HOF MASTER ENGINE</h1>
+
+        <div class="stats-row">
+            <div id="hero-lv">Level: 1</div>
+            <div id="monster-count">Enemies: 3</div>
+        </div>
+
+        <div class="bar-bg">
+            <div id="hp-bar"></div>
+        </div>
+
+        <div id="monster-hp" style="font-weight: bold;">HP: 220 / 220</div>
+        <div id="boss-warning"></div>
+        <div id="game-message">Press a key to start!</div>
+        <hr style="border:0; border-top: 1px solid #444; margin: 20px 0;">
+
+        <p><kbd>A</kbd> Attack All | <kbd>H</kbd> Heal All</p>
+        <p><kbd>S</kbd> Target Slime | <kbd>L</kbd> Level Up</p>
+        <p style="font-size: 0.7rem; color: #666;">Press <kbd>R</kbd> to Reset</p>
+    </div>
+
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
